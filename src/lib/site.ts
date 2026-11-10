@@ -15,6 +15,7 @@ export type NavItem = { href: string; label: string };
 
 export const tools: (NavItem & { summary: string; isNew?: boolean })[] = [
   { href: '/salario-liquido', label: 'Salário líquido', summary: 'INSS + IR 2026' },
+  { href: '/decimo-terceiro', label: '13º salário', summary: '1ª e 2ª parcela', isNew: true },
   { href: '/hora-extra', label: 'Hora extra', summary: '44h · 42h · 40h', isNew: true },
   { href: '/limite-mei', label: 'Limite MEI', summary: '2026 · 2027 · 2028', isNew: true },
 ];

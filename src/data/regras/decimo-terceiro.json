@@ -1,0 +1,26 @@
+{
+  "id": "decimo-terceiro.prazos",
+  "titulo": "13º salário: prazos de pagamento",
+  "versoes": [
+    {
+      "vigenteDesde": "1965-07-13",
+      "situacao": "lei",
+      "valor": {
+        "primeiraParcelaAte": "11-30",
+        "segundaParcelaAte": "12-20"
+      },
+      "fontes": [
+        {
+          "titulo": "Lei nº 4.090/1962 (gratificação natalina: 1/12 por mês, fração de 15 dias conta como mês)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l4090.htm"
+        },
+        {
+          "titulo": "Lei nº 4.749/1965, arts. 1º e 2º (2ª parcela até 20/12, adiantamento entre fevereiro e novembro)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l4749.htm"
+        }
+      ],
+      "verificadoEm": "2026-11-10",
+      "nota": "Quando o prazo cai em fim de semana, a lei não adia o pagamento: o costume é pagar no último dia útil antes."
+    }
+  ]
+}

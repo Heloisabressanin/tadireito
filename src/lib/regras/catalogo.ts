@@ -1,4 +1,6 @@
 import { z } from 'zod';
+import decimoTerceiroIrrf from '@/data/regras/decimo-terceiro-irrf.json';
+import decimoTerceiroPrazos from '@/data/regras/decimo-terceiro.json';
 import divisorHoras from '@/data/regras/divisor-horas.json';
 import inssEmpregado from '@/data/regras/inss-empregado.json';
 import irrfMensal from '@/data/regras/irrf-mensal.json';
@@ -57,12 +59,23 @@ export const meiLimiteValor = z.object({
 
 export const salarioMinimoValor = z.object({ mensal: reais });
 
+const mesDia = z.string().regex(/^(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/, 'Expected MM-DD');
+
+export const decimoTerceiroPrazosValor = z.object({ primeiraParcelaAte: mesDia, segundaParcelaAte: mesDia });
+
+export const decimoTerceiroIrrfValor = z.object({
+  /** Whether the simplified monthly discount may replace the legal deductions on the 13º. */
+  descontoSimplificado: z.boolean(),
+});
+
 export type InssValor = z.infer<typeof inssValor>;
 export type IrrfValor = z.infer<typeof irrfValor>;
 export type JornadaValor = z.infer<typeof jornadaValor>;
 export type DivisorValor = z.infer<typeof divisorValor>;
 export type MeiLimiteValor = z.infer<typeof meiLimiteValor>;
 export type SalarioMinimoValor = z.infer<typeof salarioMinimoValor>;
+export type DecimoTerceiroPrazosValor = z.infer<typeof decimoTerceiroPrazosValor>;
+export type DecimoTerceiroIrrfValor = z.infer<typeof decimoTerceiroIrrfValor>;
 
 // Parsed at module load: an invalid rule file fails the build and the tests, never production.
 export const regras = {
@@ -72,6 +85,8 @@ export const regras = {
   divisor: regraSchema(divisorValor).parse(divisorHoras),
   meiLimite: regraSchema(meiLimiteValor).parse(meiLimite),
   salarioMinimo: regraSchema(salarioMinimoValor).parse(salarioMinimo),
+  decimoTerceiroPrazos: regraSchema(decimoTerceiroPrazosValor).parse(decimoTerceiroPrazos),
+  decimoTerceiroIrrf: regraSchema(decimoTerceiroIrrfValor).parse(decimoTerceiroIrrf),
 };
 
 export const todasAsRegras = Object.values(regras);

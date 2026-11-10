@@ -41,9 +41,14 @@ export function CalculadoraLimiteMei() {
 function Formulario({ inicial }: { inicial: URLSearchParams }) {
   const hoje = useHoje(dataDaUltimaVerificacao);
   const mesAtual = Number(hoje.slice(5, 7));
-  const [ano, setAno] = useState<Ano>(anoInicial(inicial.get('ano'), hoje));
+  // Year and month default to *today*, which is only known after hydration (prerendering uses the
+  // last verification date): keep "not chosen" as null so the defaults follow the real date.
+  const anoDaUrl = inicial.get('ano');
+  const [anoEscolhido, setAno] = useState<Ano | null>(anoDaUrl && (ANOS as readonly string[]).includes(anoDaUrl) ? (anoDaUrl as Ano) : null);
+  const ano = anoEscolhido ?? anoInicial(null, hoje);
   const [faturado, setFaturado] = useState(inicial.get('faturado') ?? '58.300,00');
-  const [ateMes, setAteMes] = useState(mesInicial(inicial.get('ate'), mesAtual));
+  const [ateEscolhido, setAteMes] = useState<number | null>(inicial.has('ate') ? mesInicial(inicial.get('ate'), mesAtual) : null);
+  const ateMes = ateEscolhido ?? mesAtual;
   const [abriuNoAno, setAbriuNoAno] = useState(inicial.has('abertura'));
   const [mesAbertura, setMesAbertura] = useState(mesInicial(inicial.get('abertura'), 1));
 

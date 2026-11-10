@@ -1,0 +1,25 @@
+{
+  "id": "decimo-terceiro.irrf",
+  "titulo": "Imposto de Renda sobre o 13º salário",
+  "versoes": [
+    {
+      "vigenteDesde": "2026-01-01",
+      "situacao": "interpretacao",
+      "valor": {
+        "descontoSimplificado": true
+      },
+      "fontes": [
+        {
+          "titulo": "Lei nº 15.270/2025, art. 2º (Lei 9.250, art. 3º-A, § 3º: a redução vale para o 13º)",
+          "url": "https://legis.senado.leg.br/norma/41758136/publicacao/41762089"
+        },
+        {
+          "titulo": "Instrução Normativa RFB nº 2.141/2023 (desconto simplificado mensal)",
+          "url": "https://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=130822"
+        }
+      ],
+      "verificadoEm": "2026-11-10",
+      "nota": "O 13º é tributado à parte, na 2ª parcela. A redução da Lei 15.270/2025 vale para o 13º (texto oficial conferido). O uso do desconto simplificado de R$ 607,20 no lugar das deduções segue a IN RFB 2.141/2023, ainda não conferida no texto oficial: só muda o resultado para 13º acima de R$ 5.000."
+    }
+  ]
+}

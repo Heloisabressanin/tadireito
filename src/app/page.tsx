@@ -19,6 +19,7 @@ import { formatDateBr } from '@/lib/regras/dates';
 
 const FERRAMENTAS: { href: string; titulo: string; texto: string; icone: ReactNode; selo?: string }[] = [
   { href: '/salario-liquido', titulo: 'Salário líquido', texto: 'Com a isenção do IR até R$ 5 mil.', icone: <IconeSalario /> },
+  { href: '/decimo-terceiro', titulo: '13º salário', texto: '1ª parcela até 30/11. Quanto vai cair?', icone: <IconeCalendario />, selo: 'Até 30/11' },
   { href: '/hora-extra', titulo: 'Hora extra', texto: 'Acabou a 6x1: sua hora vale mais.', icone: <IconeRelogio />, selo: 'Novo 42h' },
   { href: '/limite-mei', titulo: 'Limite do MEI', texto: 'Sobe pra R$ 110 mil em 2027.', icone: <IconeGrafico />, selo: 'Lei nova' },
 ];
@@ -26,7 +27,7 @@ const FERRAMENTAS: { href: string; titulo: string; texto: string; icone: ReactNo
 /** Upcoming features, announced honestly (no date promised). */
 const EM_BREVE: { titulo: string; texto: string; icone: ReactNode }[] = [
   { titulo: 'Recibo e orçamento em PDF', texto: 'Pronto em 30 segundos, com o valor por extenso, para enviar no WhatsApp.', icone: <IconeDocumento /> },
-  { titulo: 'Rescisão, férias e 13º', texto: 'Todos os tipos de saída e os valores proporcionais, com a lei em dia.', icone: <IconeCalendario /> },
+  { titulo: 'Rescisão e férias', texto: 'Todos os tipos de saída e as férias proporcionais, com a lei em dia.', icone: <IconeCalendario /> },
   { titulo: 'Lembrete do DAS', texto: 'Aviso antes do dia 20 e acompanhamento do limite do MEI, mês a mês.', icone: <IconeSino /> },
   { titulo: 'Pergunte em português', texto: 'Escreva sua dúvida do seu jeito e receba o cálculo explicado.', icone: <IconeConversa /> },
 ];
