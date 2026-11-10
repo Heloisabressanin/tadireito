@@ -1,0 +1,46 @@
+name: Veille des lois
+
+# Every morning, checks the official sources behind src/data/regras and opens (or updates)
+# an issue when a human needs to look. GitHub emails the repository owner on new issues and comments.
+on:
+  schedule:
+    - cron: '0 11 * * *' # 08:00 in Brasília
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # The watch script has no dependencies: Node 24 runs TypeScript directly, no install needed.
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
+      - name: Check official sources and rule freshness
+        id: veille
+        run: |
+          set +e
+          node scripts/veille/veille.mts --relatorio relatorio.md
+          codigo=$?
+          echo "codigo=$codigo" >> "$GITHUB_OUTPUT"
+          # 0 = nothing to do, 2 = a human must review; anything else is a crash.
+          if [ "$codigo" -ne 0 ] && [ "$codigo" -ne 2 ]; then exit "$codigo"; fi
+
+      - name: Open or update the review issue
+        if: steps.veille.outputs.codigo == '2'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          numero=$(gh issue list --label veille --state open --json number --jq '.[0].number')
+          if [ -n "$numero" ]; then
+            gh issue comment "$numero" --body-file relatorio.md
+          else
+            gh label create veille --color FFC629 --description "Veille des lois" --force
+            gh issue create --title "Veille des lois : vérification nécessaire" --label veille --body-file relatorio.md
+          fi

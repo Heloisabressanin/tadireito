@@ -1,0 +1,63 @@
+{
+  "id": "irrf.mensal",
+  "titulo": "Imposto de Renda retido na fonte (tabela mensal)",
+  "versoes": [
+    {
+      "vigenteDesde": "2026-01-01",
+      "situacao": "lei",
+      "valor": {
+        "faixas": [
+          {
+            "ate": 2428.8,
+            "aliquota": 0,
+            "deducao": 0
+          },
+          {
+            "ate": 2826.65,
+            "aliquota": 0.075,
+            "deducao": 182.16
+          },
+          {
+            "ate": 3751.05,
+            "aliquota": 0.15,
+            "deducao": 394.16
+          },
+          {
+            "ate": 4664.68,
+            "aliquota": 0.225,
+            "deducao": 675.49
+          },
+          {
+            "ate": null,
+            "aliquota": 0.275,
+            "deducao": 908.73
+          }
+        ],
+        "deducaoPorDependente": 189.59,
+        "descontoSimplificado": 607.2,
+        "reducao": {
+          "isencaoAte": 5000,
+          "faixaAte": 7350,
+          "constante": 978.62,
+          "coeficiente": 0.133145
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Receita Federal — tabelas do IRPF 2026",
+          "url": "https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda/tabelas/2026"
+        },
+        {
+          "titulo": "Lei nº 15.270/2025 (redução do imposto até R$ 7.350)",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15270.htm"
+        },
+        {
+          "titulo": "Receita Federal — exemplos de aplicação da Lei 15.270/2025",
+          "url": "https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda/tabelas/exemplos-de-aplicacao-da-lei-15-270-2025"
+        }
+      ],
+      "verificadoEm": "2026-10-28",
+      "nota": "A redução usa os rendimentos tributáveis (salário), não a base de cálculo, e fica limitada ao imposto calculado (Lei 9.250, art. 3º-A, §1º)."
+    }
+  ]
+}

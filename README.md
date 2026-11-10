@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tá Direito
 
-## Getting Started
+Free Brazilian calculators — net salary, overtime and MEI revenue limit — always up to date with the law, with official sources on every result.
 
-First, run the development server:
+> Status: Phase 1 (MVP) built and tested, not deployed yet. UI in Brazilian Portuguese; code and docs in English.
+
+## Stack
+
+- **Next.js 16 (App Router)**, statically generated pages for SEO and speed
+- **TypeScript** + **Tailwind CSS 4**
+- **Vitest** for the calculation engine, **Playwright** for end-to-end tests (with clock travel) and screenshots
+- Hosting: **Vercel** (planned)
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev          # http://localhost:3200
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Script | What it does |
+|---|---|
+| `pnpm dev` | Dev server on port 3200 |
+| `pnpm build` / `pnpm start` | Production build / serve on port 3200 |
+| `pnpm lint` | ESLint |
+| `pnpm typecheck` | Route types + `tsc --noEmit` |
+| `pnpm test` | Unit tests (Vitest), including the Receita Federal's official examples |
+| `pnpm test:e2e` | Browser tests on the production build (run `pnpm build` first), mobile + desktop |
+| `pnpm veille` | Check the official sources behind the rules and print a report |
+| `pnpm veille:aceitar [id…]` | After review, record the current content of the sources as the new reference |
+| `pnpm regras:marcar-verificadas` | Monthly routine: mark current rule versions as verified today (refused if a source changed) |
+| `node scripts/screenshots.mjs [baseUrl] [outDir]` | Mobile + desktop screenshots of the main pages |
+| `node scripts/gerar-imagens.mjs` | Regenerate app icons and the social share image from the logo |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/app           Pages (one route per calculator)
+src/components    Shared UI (logo, header, footer…)
+src/lib/calc      Calculation engine — pure functions, no UI dependency
+src/data/regras   Versioned legal rules (values, effective dates, official sources)
+scripts/veille    Daily watch of official sources (fontes.json, estado.json, instantaneos/)
+```
 
-## Learn More
+## Core principle
 
-To learn more about Next.js, take a look at the following resources:
+The engine never hardcodes legal values: every rate, bracket and limit lives in `src/data/regras` with its effective dates, official source and last verification date. The engine picks the version in force at the reference date, and the UI warns users when a rule may be outdated.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Keeping the rules up to date
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Every morning** the `Veille des lois` workflow downloads the official pages listed in `scripts/veille/fontes.json`, extracts their content and compares it with the reference in `scripts/veille/estado.json`. It also flags rules close to the 45-day verification limit and scheduled changes.
+2. When a human is needed, it opens (or comments on) an issue labelled `veille`, with a diff of the changed lines. GitHub emails the owner.
+3. The reviewer updates `src/data/regras/*.json` if a value changed (new dated version, official source, `verificadoEm`), runs `pnpm veille:aceitar`, then commits. CI re-runs every test, including the official examples.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Planalto blocks automated requests, so the watch reads the official copies published by the Câmara dos Deputados; users still get Planalto links.

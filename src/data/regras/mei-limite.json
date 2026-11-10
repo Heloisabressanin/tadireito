@@ -1,0 +1,61 @@
+{
+  "id": "mei.limite",
+  "titulo": "Limite de faturamento do MEI",
+  "versoes": [
+    {
+      "vigenteDesde": "2018-01-01",
+      "vigenteAte": "2026-12-31",
+      "situacao": "lei",
+      "valor": {
+        "anual": 81000,
+        "mensalProporcional": 6750,
+        "toleranciaExcesso": 0.2
+      },
+      "fontes": [
+        {
+          "titulo": "Lei Complementar nº 123/2006, art. 18-A, §§ 1º, 2º e 7º",
+          "url": "https://www2.camara.leg.br/legin/fed/leicom/2006/leicomplementar-123-14-dezembro-2006-548099-normaatualizada-pl.html"
+        }
+      ],
+      "verificadoEm": "2026-10-28"
+    },
+    {
+      "vigenteDesde": "2027-01-01",
+      "vigenteAte": "2027-12-31",
+      "situacao": "lei",
+      "valor": {
+        "anual": 110000,
+        "mensalProporcional": 9166.67,
+        "toleranciaExcesso": 0.2
+      },
+      "fontes": [
+        {
+          "titulo": "Lei Complementar nº 238/2026, art. 2º",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp238.htm"
+        },
+        {
+          "titulo": "Lei Complementar nº 238/2026 (texto na Câmara dos Deputados)",
+          "url": "https://www2.camara.leg.br/legin/fed/leicom/2026/leicomplementar-238-21-outubro-2026-800071-publicacaooriginal-181678-pl.html"
+        }
+      ],
+      "verificadoEm": "2026-10-28",
+      "nota": "O aumento do limite depende de previsão nas leis orçamentárias de 2027 a 2029 (LC 238/2026, art. 3º)."
+    },
+    {
+      "vigenteDesde": "2028-01-01",
+      "situacao": "lei",
+      "valor": {
+        "anual": 140000,
+        "mensalProporcional": 11666.67,
+        "toleranciaExcesso": 0.2
+      },
+      "fontes": [
+        {
+          "titulo": "Lei Complementar nº 238/2026, arts. 1º e 10, I",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp238.htm"
+        }
+      ],
+      "verificadoEm": "2026-10-28"
+    }
+  ]
+}

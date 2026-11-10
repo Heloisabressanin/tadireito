@@ -1,0 +1,26 @@
+{
+  "inss-tabela-contribuicao": {
+    "hash": "bb8eeebb929cf31812f9fe87d4b05549d5ddbe179ab97385dcdb6fd030f8c6aa",
+    "conferidoEm": "2026-10-28"
+  },
+  "receita-tabelas-irpf": {
+    "hash": "2d937b9fa553df2e2b5dd4cfaa77a4396eada8132867e11a3623b2fa6932fa4a",
+    "conferidoEm": "2026-10-28"
+  },
+  "receita-exemplos-lei-15270": {
+    "hash": "5e01701512bd38a83f644f8100a9e1b503ac3cdf26f1ebafee817802477cedca",
+    "conferidoEm": "2026-10-28"
+  },
+  "lc-123-norma-atualizada": {
+    "hash": "ef933970e274b45650a04a3e82446f3b535d167d7106a8faf9ff9bd768aab7d1",
+    "conferidoEm": "2026-10-28"
+  },
+  "mte-noticias-jornada": {
+    "hash": "c7c22c81dc88ea84c3a59fc09a880f026ddbb5dcc42c2f84ff701f3626c651c6",
+    "conferidoEm": "2026-10-28"
+  },
+  "agencia-brasil-economia": {
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "conferidoEm": "2026-10-28"
+  }
+}

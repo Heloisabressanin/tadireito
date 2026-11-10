@@ -1,0 +1,61 @@
+{
+  "id": "jornada.divisor",
+  "titulo": "Divisor mensal do salário-hora (mensalista)",
+  "versoes": [
+    {
+      "vigenteDesde": "1988-10-05",
+      "vigenteAte": "2026-12-15",
+      "situacao": "lei",
+      "valor": {
+        "divisor": 220
+      },
+      "fontes": [
+        {
+          "titulo": "CLT, art. 64 (salário-hora = salário mensal ÷ 30 × horas diárias)",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"
+        }
+      ],
+      "verificadoEm": "2026-10-28",
+      "nota": "Divisor 220 para 44 horas semanais: prática consolidada (44 ÷ 6 × 30)."
+    },
+    {
+      "vigenteDesde": "2026-12-16",
+      "vigenteAte": "2027-12-15",
+      "situacao": "interpretacao",
+      "valor": {
+        "divisor": 210
+      },
+      "fontes": [
+        {
+          "titulo": "CLT, art. 64",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"
+        },
+        {
+          "titulo": "Emenda Constitucional nº 141/2026",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc141.htm"
+        }
+      ],
+      "verificadoEm": "2026-10-28",
+      "nota": "Ainda não há norma oficial sobre o divisor para 42 horas. Usamos 210 pelo mesmo método do divisor 220 (42 ÷ 6 × 30). O MTE prepara uma portaria sobre a jornada 5x2."
+    },
+    {
+      "vigenteDesde": "2027-12-16",
+      "situacao": "interpretacao",
+      "valor": {
+        "divisor": 200
+      },
+      "fontes": [
+        {
+          "titulo": "CLT, art. 64",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"
+        },
+        {
+          "titulo": "Emenda Constitucional nº 141/2026",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc141.htm"
+        }
+      ],
+      "verificadoEm": "2026-10-28",
+      "nota": "Divisor 200 é o aplicado pelo TST para 40 horas semanais (Súmula 431), mas ainda não há regulamentação da EC 141/2026."
+    }
+  ]
+}

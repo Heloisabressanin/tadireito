@@ -1,0 +1,39 @@
+{
+  "id": "inss.empregado",
+  "titulo": "Contribuição do INSS (empregado, doméstico e avulso)",
+  "versoes": [
+    {
+      "vigenteDesde": "2026-01-01",
+      "vigenteAte": "2026-12-31",
+      "situacao": "lei",
+      "valor": {
+        "faixas": [
+          {
+            "ate": 1621,
+            "aliquota": 0.075
+          },
+          {
+            "ate": 2902.84,
+            "aliquota": 0.09
+          },
+          {
+            "ate": 4354.27,
+            "aliquota": 0.12
+          },
+          {
+            "ate": 8475.55,
+            "aliquota": 0.14
+          }
+        ]
+      },
+      "fontes": [
+        {
+          "titulo": "Portaria Interministerial MPS/MF nº 13/2026 — tabela de contribuição mensal (INSS)",
+          "url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/inscricao-e-contribuicao/tabela-de-contribuicao-mensal"
+        }
+      ],
+      "verificadoEm": "2026-10-28",
+      "nota": "Alíquotas progressivas: cada faixa do salário paga a sua alíquota. O teto é o limite da última faixa."
+    }
+  ]
+}

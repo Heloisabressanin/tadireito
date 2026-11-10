@@ -1,0 +1,44 @@
+[
+  {
+    "id": "inss-tabela-contribuicao",
+    "titulo": "INSS — tabela de contribuição mensal",
+    "url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/inscricao-e-contribuicao/tabela-de-contribuicao-mensal",
+    "regras": ["inss.empregado", "salario-minimo"],
+    "extracao": { "tipo": "trecho", "inicio": "id=\"content-core\"", "fim": "id=\"viewlet-below-content\"" }
+  },
+  {
+    "id": "receita-tabelas-irpf",
+    "titulo": "Receita Federal — tabelas do IRPF 2026",
+    "url": "https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda/tabelas/2026",
+    "regras": ["irrf.mensal"],
+    "extracao": { "tipo": "trecho", "inicio": "id=\"content-core\"", "fim": "id=\"viewlet-below-content\"" }
+  },
+  {
+    "id": "receita-exemplos-lei-15270",
+    "titulo": "Receita Federal — exemplos da Lei 15.270/2025",
+    "url": "https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda/tabelas/exemplos-de-aplicacao-da-lei-15-270-2025",
+    "regras": ["irrf.mensal"],
+    "extracao": { "tipo": "trecho", "inicio": "id=\"content-core\"", "fim": "id=\"viewlet-below-content\"" }
+  },
+  {
+    "id": "lc-123-norma-atualizada",
+    "titulo": "Lei Complementar 123/2006 (texto atualizado, Câmara dos Deputados)",
+    "url": "https://www2.camara.leg.br/legin/fed/leicom/2006/leicomplementar-123-14-dezembro-2006-548099-normaatualizada-pl.html",
+    "regras": ["mei.limite"],
+    "extracao": { "tipo": "corpo" }
+  },
+  {
+    "id": "mte-noticias-jornada",
+    "titulo": "Ministério do Trabalho — notícias sobre a jornada (portaria 5x2, divisor)",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo",
+    "regras": ["jornada.semanal", "jornada.divisor"],
+    "extracao": { "tipo": "palavras", "palavras": ["5x2", "jornada", "divisor", "escala 6x1"], "inicio": "id=\"content-core\"", "fim": "id=\"viewlet-below-content\"" }
+  },
+  {
+    "id": "agencia-brasil-economia",
+    "titulo": "Agência Brasil — economia (salário mínimo, MEI, INSS, IR)",
+    "url": "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml",
+    "regras": ["salario-minimo", "mei.limite", "inss.empregado", "irrf.mensal"],
+    "extracao": { "tipo": "palavras", "palavras": ["salário mínimo", "teto do mei", "limite do mei", "tabela do inss", "tabela do imposto de renda", "jornada de 42"] }
+  }
+]

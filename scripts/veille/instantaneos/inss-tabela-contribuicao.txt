@@ -1,0 +1,39 @@
+A tabela de contribuição mensal poderá ser utilizada para consulta sobre as faixas de salários e respectivas alíquotas para o cálculo das contribuições a serem pagas ao INSS.
+As categorias: empregado, empregado doméstico e trabalhador avulso possuem faixas e alíquotas distintas em relação ao contribuinte individual e facultativo.
+TABELAS VÁLIDAS A PARTIR DA COMPETÊNCIA JANEIRO DE 2026
+1. Para Empregado, Empregado Doméstico e Trabalhador Avulso:
+Salário de Contribuição (R$)
+Alíquota progressiva para fins de recolhimento ao INSS
+Até R$ 1.621,00
+7,5%
+De R$ 1.621,01 a R$ 2.902,84
+9%
+De R$ 2.902,85 até R$ 4.354,27
+12%
+De R$ 4.354,28 até R$ 8.475,55
+14%
+2. Para Contribuinte Individual, Facultativo e Microempreendedor Individual - MEI:
+Salário de Contribuição (R$)
+Alíquota
+Valor
+R$ 1.621,00
+5% (*)
+R$ 81,05
+R$ 1.621,00
+11% (**)
+R$ 178,31
+R$ 1.621,00 até R$ 8.475,55
+20%
+Entre R$ 324,20 (salário mínimo) e R$ 1.695,11 (teto)
+*Alíquota exclusiva para segurado Facultativo Baixa Renda e MEI;
+**Alíquota exclusiva do Plano Simplificado de Previdência;
+Os valores das tabelas foram extraídos da PORTARIA INTERMINISTERIAL MPS/MF Nº 13 , de 09/01/2026 e têm aplicação sobre as contribuições a partir da competência janeiro/2026.
+Outras informações:
+1. Se houver necessidade, consulte a Tabela de contribuição mensal – anos anteriores . Valor do salário mínimo a partir de maio de 1984 e respectivo fundamento legal.
+2. Sempre que o empregado, o empregado doméstico e o trabalhador avulso tiverem mais de um vínculo empregatício (vínculos concomitantes), as remunerações deverão ser somadas para aplicação da alíquota mensal correspondente, conforme tabelado para a competência, respeitando-se o limite máximo de contribuição.
+3. Quando houver pagamento de remuneração relativa a décimo terceiro salário, este não deve ser somado à remuneração mensal para efeito de enquadramento na tabela de salários-de-contribuição, ou seja, será aplicada a alíquota sobre os valores em separado.
+4. Para fins de contribuição na condição de Segurado Facultativo de Baixa Renda - FBR, com alíquota de 5% sobre o salário-mínimo, só será validado o pagamento desde que:
+• O contribuinte não exerça nenhuma atividade remunerada e nem possua renda formal de qualquer natureza declarada em seu nome, exceto o benefício social Auxílio-Brasil ou Bolsa-Família;
+• Esteja previamente inscrito no Cadastro Único para Programas Sociais - CadÚnico;
+• Tenha renda familiar mensal de até 2 salários mínimos;
+• Atualize seu cadastro junto ao CadÚnico periodicamente, a cada 02 (dois) anos.

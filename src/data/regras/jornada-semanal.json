@@ -1,0 +1,59 @@
+{
+  "id": "jornada.semanal",
+  "titulo": "Duração máxima do trabalho normal por semana",
+  "versoes": [
+    {
+      "vigenteDesde": "1988-10-05",
+      "vigenteAte": "2026-12-15",
+      "situacao": "lei",
+      "valor": {
+        "horas": 44,
+        "diasDeRepouso": 1
+      },
+      "fontes": [
+        {
+          "titulo": "Constituição Federal, art. 7º, XIII e XV (redação original)",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+        }
+      ],
+      "verificadoEm": "2026-10-28"
+    },
+    {
+      "vigenteDesde": "2026-12-16",
+      "vigenteAte": "2027-12-15",
+      "situacao": "lei",
+      "valor": {
+        "horas": 42,
+        "diasDeRepouso": 2
+      },
+      "fontes": [
+        {
+          "titulo": "Emenda Constitucional nº 141/2026, art. 6º, I e art. 10, I",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc141.htm"
+        },
+        {
+          "titulo": "Emenda Constitucional nº 141/2026 (texto na Câmara dos Deputados)",
+          "url": "https://www2.camara.leg.br/legin/fed/emecon/2026/emendaconstitucional-141-16-outubro-2026-800062-publicacaooriginal-181622-pl.html"
+        }
+      ],
+      "verificadoEm": "2026-10-28",
+      "nota": "Data calculada: 2 meses após a publicação da EC no DOU de 16/10/2026. Sem redução de salário (art. 2º)."
+    },
+    {
+      "vigenteDesde": "2027-12-16",
+      "situacao": "lei",
+      "valor": {
+        "horas": 40,
+        "diasDeRepouso": 2
+      },
+      "fontes": [
+        {
+          "titulo": "Emenda Constitucional nº 141/2026, art. 6º, II",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc141.htm"
+        }
+      ],
+      "verificadoEm": "2026-10-28",
+      "nota": "Data calculada: 1 ano após a etapa de 42 horas."
+    }
+  ]
+}

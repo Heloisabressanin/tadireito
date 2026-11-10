@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Tá Direito brand tokens (see ~/Desktop/Tá Direito/Logos). */
+@theme {
+  --color-verde: #0e7c4a;
+  --color-verde-escuro: #0a5c37;
+  --color-verde-claro: #e8f5ee;
+  --color-amarelo: #ffc629;
+  --color-amarelo-claro: #fff6d9;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-tinta: #10201a;
+  /* Calçadão direction: warm cream background. */
+  --color-fundo: #fff8ea;
+  --color-papel: #fbf8f1;
+  --color-papel-linha: #e6dfcd;
+  /* Small yellow text on green: the bright yellow only passes WCAG for large text. */
+  --color-amarelo-palido: #fff1c4;
+  --color-cinza: #5b6b62;
+  --color-linha: #e6dfcd;
+  --color-negativo: #c2412d;
+  /* Darker than WhatsApp's brand green so white text keeps a 5:1 contrast. */
+  --color-whatsapp: #15803d;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-inter), ui-sans-serif, sans-serif;
+
+  --animate-carimbo: carimbo 0.45s cubic-bezier(0.2, 1.6, 0.4, 1) both;
+  --animate-rolar: rolar 40s linear infinite;
+
+  /* The "TÁ DIREITO ✓" tag popping onto the result. */
+  @keyframes carimbo {
+    0% {
+      transform: rotate(8deg) scale(1.9);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(8deg) scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes rolar {
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
 
+@layer components {
+  /* Copacabana boardwalk waves: the brand motif. */
+  .ondas {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='48' viewBox='0 0 120 48'%3E%3Cpath d='M0 24 C 15 4, 45 4, 60 24 S 105 44, 120 24' fill='none' stroke='%23fff' stroke-width='9'/%3E%3C/svg%3E");
+    background-size: 120px 48px;
+  }
+
+  /* Bold outlined card with an offset shadow (tools, calculator). */
+  .cartao-forte {
+    border: 2.5px solid var(--color-tinta);
+    box-shadow: 6px 6px 0 var(--color-tinta);
+  }
+  .cartao-forte-grande {
+    border: 2.5px solid var(--color-tinta);
+    box-shadow: 0 24px 50px rgb(16 32 26 / 0.22);
+  }
+
+  /* Display headings and key amounts: Bricolage Grotesque, heavy and tight. */
+  .titulo-display {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html {
+  /* Amounts line up in tables and results. */
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tilted stickers and their pop animation must never create a horizontal scrollbar on phones. */
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: clip;
+}
+
+body {
+  background: var(--color-fundo);
+  color: var(--color-tinta);
+}
+
+/* Long-form explanations on tool pages (a layer, so utility classes can still override them). */
+@layer components {
+  .conteudo h2 {
+    margin-top: 2.25rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .conteudo p,
+  .conteudo li {
+    color: #3e4b44;
+    line-height: 1.65;
+  }
+  .conteudo ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+  }
+  .conteudo table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    border: 2px solid var(--color-tinta);
+    background: white;
+    font-size: 0.875rem;
+  }
+  .conteudo th,
+  .conteudo td {
+    border-bottom: 1px solid var(--color-papel-linha);
+    padding: 0.55rem 0.75rem;
+    text-align: left;
+  }
+  .conteudo th {
+    background: var(--color-amarelo);
+    color: var(--color-tinta) !important;
+    color: var(--color-cinza);
+    font-size: 0.8rem;
+  }
 }

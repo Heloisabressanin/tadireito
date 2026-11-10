@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm typecheck
+      # Includes the official Receita Federal examples and the rule-file validation.
+      - run: pnpm test
+      - run: pnpm build
+
+      # Real browser tests on the production build (mobile + desktop), including clock travel
+      # to check the rule switches on 16/12/2026 and the outdated-values warning in 2027.
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm test:e2e
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-traces
+          path: test-results/
+          retention-days: 7

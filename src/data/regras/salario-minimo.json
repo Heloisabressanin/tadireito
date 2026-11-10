@@ -1,0 +1,36 @@
+{
+  "id": "salario-minimo",
+  "titulo": "Salário mínimo nacional",
+  "versoes": [
+    {
+      "vigenteDesde": "2026-01-01",
+      "vigenteAte": "2026-12-31",
+      "situacao": "lei",
+      "valor": {
+        "mensal": 1621
+      },
+      "fontes": [
+        {
+          "titulo": "Decreto nº 12.797/2025",
+          "url": "https://www2.camara.leg.br/legin/fed/decret/2025/decreto-12797-23-dezembro-2025-798569-publicacaooriginal-177587-pe.html"
+        }
+      ],
+      "verificadoEm": "2026-10-28"
+    },
+    {
+      "vigenteDesde": "2027-01-01",
+      "situacao": "proposta",
+      "valor": {
+        "mensal": 1741
+      },
+      "fontes": [
+        {
+          "titulo": "Projeto de Lei Orçamentária 2027 (Agência Brasil)",
+          "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/orcamento-de-2027-preve-salario-minimo-de-r-1741"
+        }
+      ],
+      "verificadoEm": "2026-10-28",
+      "nota": "Valor previsto no orçamento. O valor final é definido por decreto em dezembro."
+    }
+  ]
+}
