@@ -12,7 +12,7 @@ export const metadata: Metadata = metadadosPagina({
 
 export default function PrivacidadePage() {
   return (
-    <PaginaTexto chamada="LGPD" titulo="Política de privacidade" atualizadoEm="28/10/2026">
+    <PaginaTexto chamada="LGPD" titulo="Política de privacidade" atualizadoEm="10/11/2026">
       <p>
         Esta política explica como o {site.name} trata dados pessoais, de acordo com a Lei Geral de Proteção de Dados (Lei 13.709/2018, LGPD).
       </p>
@@ -32,6 +32,12 @@ export default function PrivacidadePage() {
         Como qualquer site, o servidor de hospedagem registra dados técnicos de acesso (como endereço IP, data e página visitada) para segurança e
         funcionamento do serviço, com base no legítimo interesse (LGPD, art. 7º, IX). Esses registros são temporários e não são usados para
         identificar você.
+      </p>
+
+      <h2>Estatísticas de visita</h2>
+      <p>
+        Usamos o Vercel Web Analytics para contar visitas de forma anônima e agregada (página vista, país, tipo de aparelho). Ele não usa cookies
+        e não identifica você. Os valores digitados nas calculadoras são removidos antes de qualquer envio.
       </p>
 
       <h2>Quando você escreve para nós</h2>

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Bricolage_Grotesque, Inter } from 'next/font/google';
+import { Estatisticas } from '@/components/estatisticas';
 import { SiteFooter } from '@/components/site-footer';
 import { NavInferior } from '@/components/navegacao';
 import { SiteHeader } from '@/components/site-header';
@@ -53,6 +54,8 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         <main className="flex-1">{children}</main>
         <SiteFooter />
         <NavInferior />
+        {/* The analytics script is served by Vercel only, so skip it in local and test builds. */}
+        {process.env.VERCEL && <Estatisticas />}
       </body>
     </html>
   );

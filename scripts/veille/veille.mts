@@ -16,7 +16,7 @@ const pasta = dirname(fileURLToPath(import.meta.url));
 const raiz = join(pasta, '..', '..');
 const arquivoEstado = join(pasta, 'estado.json');
 const pastaInstantaneos = join(pasta, 'instantaneos');
-const USER_AGENT = 'Mozilla/5.0 (compatible; TaDireitoVeille/1.0; +https://tadireito.com.br/sobre)';
+const USER_AGENT = 'Mozilla/5.0 (compatible; TaDireitoVeille/1.0; +https://tadireito.com/sobre)';
 
 function hojeEmBrasilia() {
   return new Intl.DateTimeFormat('sv-SE', { timeZone: 'America/Sao_Paulo' }).format(new Date());
