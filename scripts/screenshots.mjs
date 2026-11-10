@@ -5,7 +5,7 @@ import { mkdir } from 'node:fs/promises';
 
 const baseUrl = process.argv[2] ?? 'http://localhost:3200';
 const outDir = process.argv[3] ?? 'screenshots';
-const pages = ['/', '/salario-liquido', '/decimo-terceiro', '/hora-extra', '/limite-mei', '/fim-da-escala-6x1', '/atualizacoes', '/app'];
+const pages = ['/', '/salario-liquido', '/decimo-terceiro', '/rescisao', '/hora-extra', '/limite-mei', '/fim-da-escala-6x1', '/atualizacoes', '/app'];
 
 await mkdir(outDir, { recursive: true });
 const browser = await chromium.launch();

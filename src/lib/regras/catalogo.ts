@@ -6,6 +6,7 @@ import inssEmpregado from '@/data/regras/inss-empregado.json';
 import irrfMensal from '@/data/regras/irrf-mensal.json';
 import jornadaSemanal from '@/data/regras/jornada-semanal.json';
 import meiLimite from '@/data/regras/mei-limite.json';
+import rescisao from '@/data/regras/rescisao.json';
 import salarioMinimo from '@/data/regras/salario-minimo.json';
 import { regraSchema } from './schema';
 
@@ -63,6 +64,16 @@ const mesDia = z.string().regex(/^(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/, 'Expe
 
 export const decimoTerceiroPrazosValor = z.object({ primeiraParcelaAte: mesDia, segundaParcelaAte: mesDia });
 
+export const rescisaoValor = z.object({
+  avisoDiasBase: z.number().int().positive(),
+  avisoDiasPorAno: z.number().int().nonnegative(),
+  avisoDiasMaximo: z.number().int().positive(),
+  depositoFgts: aliquota,
+  multaFgtsSemJustaCausa: aliquota,
+  multaFgtsAcordo: aliquota,
+  saqueFgtsAcordo: aliquota,
+});
+
 export const decimoTerceiroIrrfValor = z.object({
   /** Whether the simplified monthly discount may replace the legal deductions on the 13º. */
   descontoSimplificado: z.boolean(),
@@ -74,6 +85,7 @@ export type JornadaValor = z.infer<typeof jornadaValor>;
 export type DivisorValor = z.infer<typeof divisorValor>;
 export type MeiLimiteValor = z.infer<typeof meiLimiteValor>;
 export type SalarioMinimoValor = z.infer<typeof salarioMinimoValor>;
+export type RescisaoValor = z.infer<typeof rescisaoValor>;
 export type DecimoTerceiroPrazosValor = z.infer<typeof decimoTerceiroPrazosValor>;
 export type DecimoTerceiroIrrfValor = z.infer<typeof decimoTerceiroIrrfValor>;
 
@@ -87,6 +99,7 @@ export const regras = {
   salarioMinimo: regraSchema(salarioMinimoValor).parse(salarioMinimo),
   decimoTerceiroPrazos: regraSchema(decimoTerceiroPrazosValor).parse(decimoTerceiroPrazos),
   decimoTerceiroIrrf: regraSchema(decimoTerceiroIrrfValor).parse(decimoTerceiroIrrf),
+  rescisao: regraSchema(rescisaoValor).parse(rescisao),
 };
 
 export const todasAsRegras = Object.values(regras);

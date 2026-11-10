@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { vigiarErros } from './ajuda';
 
-const PAGINAS = ['/', '/salario-liquido', '/decimo-terceiro', '/hora-extra', '/limite-mei', '/fim-da-escala-6x1', '/atualizacoes', '/app', '/sobre', '/privacidade', '/termos'];
+const PAGINAS = ['/', '/salario-liquido', '/decimo-terceiro', '/rescisao', '/hora-extra', '/limite-mei', '/fim-da-escala-6x1', '/atualizacoes', '/app', '/sobre', '/privacidade', '/termos'];
 
 for (const caminho of PAGINAS) {
   test(`${caminho} renders without errors and with its own title`, async ({ page }) => {

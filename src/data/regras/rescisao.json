@@ -1,0 +1,39 @@
+{
+  "id": "rescisao.verbas",
+  "titulo": "Rescisão: aviso prévio, férias e FGTS",
+  "versoes": [
+    {
+      "vigenteDesde": "2017-11-11",
+      "situacao": "lei",
+      "valor": {
+        "avisoDiasBase": 30,
+        "avisoDiasPorAno": 3,
+        "avisoDiasMaximo": 90,
+        "depositoFgts": 0.08,
+        "multaFgtsSemJustaCausa": 0.4,
+        "multaFgtsAcordo": 0.2,
+        "saqueFgtsAcordo": 0.8
+      },
+      "fontes": [
+        {
+          "titulo": "CLT, arts. 146, 147, 477, 484-A e 487 (texto atualizado no Senado Federal)",
+          "url": "https://legis.senado.leg.br/norma/530547/publicacao/37353698"
+        },
+        {
+          "titulo": "Lei nº 12.506/2011 (aviso prévio de 30 dias + 3 por ano, até 90)",
+          "url": "https://legis.senado.leg.br/norma/584362/publicacao/15760822"
+        },
+        {
+          "titulo": "Lei nº 8.036/1990, art. 18 (multa de 40% do FGTS)",
+          "url": "https://legis.senado.leg.br/norma/549912/publicacao/34619927"
+        },
+        {
+          "titulo": "Lei nº 4.090/1962 (13º proporcional na rescisão)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l4090.htm"
+        }
+      ],
+      "verificadoEm": "2026-11-10",
+      "nota": "Férias e aviso prévio indenizados não têm INSS nem Imposto de Renda (Lei 8.212, art. 28, § 9º; Lei 7.713, art. 6º, V; Súmula 386 do STJ). No acordo, o aviso indenizado pela metade conta no tempo de serviço pelos dias pagos: é a nossa leitura, a lei não detalha."
+    }
+  ]
+}
