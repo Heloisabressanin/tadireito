@@ -23,7 +23,7 @@ export function aplicacaoWeb({ nome, descricao, caminho }: { nome: string; descr
     inLanguage: 'pt-BR',
     isAccessibleForFree: true,
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'BRL' },
-    publisher: { '@type': 'Organization', name: site.name, url: site.url },
+    publisher: { '@type': 'Organization', name: site.name, url: site.url, sameAs: [site.redes.tiktok.url] },
   };
 }
 
