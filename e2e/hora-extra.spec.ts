@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { resultado, viajarPara, vigiarErros } from './ajuda';
 
-test('compares today with the 42-hour week and flags the estimated divisor', async ({ page }) => {
+test('compares today with the 42-hour week with the official divisor (Decreto 13.173/2026)', async ({ page }) => {
   await viajarPara(page, '2026-10-28T10:00:00');
   const semErros = await vigiarErros(page);
   await page.goto('/hora-extra');
@@ -9,7 +9,7 @@ test('compares today with the 42-hour week and flags the estimated divisor', asy
   await expect(resultado(page)).toContainText('R$ 163,64');
   await expect(page.getByText('A partir de 16/12/2026 · 42h')).toBeVisible();
   await expect(page.getByText('+ R$ 7,79 por mês com o mesmo salário')).toBeVisible();
-  await expect(page.getByText(/Valor estimado: divisor/)).toBeVisible();
+  await expect(page.getByText(/Valor estimado: divisor/)).toHaveCount(0);
   semErros();
 });
 

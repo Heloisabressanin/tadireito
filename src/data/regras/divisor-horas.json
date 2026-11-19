@@ -21,41 +21,41 @@
     {
       "vigenteDesde": "2026-12-16",
       "vigenteAte": "2027-12-15",
-      "situacao": "interpretacao",
+      "situacao": "lei",
       "valor": {
         "divisor": 210
       },
       "fontes": [
         {
-          "titulo": "CLT, art. 64",
-          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"
+          "titulo": "Decreto nº 13.173/2026, art. 5º (divisor 210 para 42h e 200 para 40h)",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D13173.htm"
         },
         {
           "titulo": "Emenda Constitucional nº 141/2026",
           "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc141.htm"
         }
       ],
-      "verificadoEm": "2026-10-28",
-      "nota": "Ainda não há norma oficial sobre o divisor para 42 horas. Usamos 210 pelo mesmo método do divisor 220 (42 ÷ 6 × 30). O MTE prepara uma portaria sobre a jornada 5x2."
+      "verificadoEm": "2026-11-19",
+      "nota": "Divisor 210 para 42 horas semanais, fixado pelo Decreto nº 13.173, de 19/11/2026, que regulamenta a EC 141/2026."
     },
     {
       "vigenteDesde": "2027-12-16",
-      "situacao": "interpretacao",
+      "situacao": "lei",
       "valor": {
         "divisor": 200
       },
       "fontes": [
         {
-          "titulo": "CLT, art. 64",
-          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"
+          "titulo": "Decreto nº 13.173/2026, art. 5º (divisor 210 para 42h e 200 para 40h)",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D13173.htm"
         },
         {
           "titulo": "Emenda Constitucional nº 141/2026",
           "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc141.htm"
         }
       ],
-      "verificadoEm": "2026-10-28",
-      "nota": "Divisor 200 é o aplicado pelo TST para 40 horas semanais (Súmula 431), mas ainda não há regulamentação da EC 141/2026."
+      "verificadoEm": "2026-11-19",
+      "nota": "Divisor 200 para 40 horas semanais, fixado pelo Decreto nº 13.173, de 19/11/2026, que regulamenta a EC 141/2026."
     }
   ]
 }

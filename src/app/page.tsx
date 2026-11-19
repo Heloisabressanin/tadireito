@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { LogoMark } from '@/components/logo';
@@ -16,6 +17,10 @@ import { CalculadoraRapida } from '@/features/inicio/calculadora-rapida';
 import { NovidadesDaLei } from '@/features/inicio/novidades-da-lei';
 import { dataDaUltimaVerificacao } from '@/lib/regras/catalogo';
 import { formatDateBr } from '@/lib/regras/dates';
+
+// The home page had no canonical tag (only tool pages did): Google must know '/' is the one true URL,
+// not '/?utm_source=tiktok' or other variants.
+export const metadata: Metadata = { alternates: { canonical: '/' } };
 
 const FERRAMENTAS: { href: string; titulo: string; texto: string; icone: ReactNode; selo?: string }[] = [
   { href: '/salario-liquido', titulo: 'Salário líquido', texto: 'Com a isenção do IR até R$ 5 mil.', icone: <IconeSalario /> },

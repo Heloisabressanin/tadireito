@@ -8,7 +8,7 @@ import { metadadosPagina } from '@/lib/metadados';
 export const metadata: Metadata = metadadosPagina({
   titulo: 'Fim da escala 6x1: quando começa a jornada de 42h e 40h',
   descricao:
-    'Tudo sobre a Emenda Constitucional 141/2026: jornada de 42 horas a partir de 16/12/2026, 40 horas em 16/12/2027, dois dias de descanso e sem redução de salário.',
+    'Tudo sobre a Emenda Constitucional 141/2026 e o Decreto 13.173/2026: jornada de 42 horas a partir de 16/12/2026, 40 horas em 16/12/2027, divisor 210, dois dias de descanso e sem redução de salário.',
   caminho: '/fim-da-escala-6x1',
 });
 
@@ -22,6 +22,10 @@ const PERGUNTAS: Pergunta[] = [
   {
     pergunta: 'Por que 16 de dezembro de 2026?',
     resposta: 'A Emenda diz que a jornada de 42 horas vale 2 meses após a publicação, que foi em 16/10/2026.',
+  },
+  {
+    pergunta: 'Qual é o divisor da hora com 42 horas?',
+    resposta: 'É 210, fixado pelo Decreto nº 13.173/2026 (art. 5º). Para a jornada de 40 horas, o divisor é 200.',
   },
   {
     pergunta: 'Vale para todos os trabalhadores?',
@@ -65,11 +69,17 @@ export default function FimDaEscala6x1Page() {
         <li>A hora extra continua valendo no mínimo 50% a mais que a hora normal.</li>
       </ul>
 
+      <h2>O que o decreto de 19/11/2026 definiu</h2>
+      <p>
+        O <strong>Decreto nº 13.173/2026</strong> regulamenta a Emenda e fixa o divisor do salário-hora: <strong>210</strong> para a jornada de
+        42 horas e <strong>200</strong> para a de 40 horas (art. 5º). Com o mesmo salário, a hora fica mais cara: com R$ 3.000, ela passa de
+        R$ 13,64 para R$ 14,29. Nossa calculadora de hora extra já usa esses divisores.
+      </p>
+
       <h2>O que ainda depende de regulamentação</h2>
       <p>
-        O Ministério do Trabalho prepara uma portaria sobre a jornada 5x2. Até lá, ainda não há regra oficial sobre o divisor da hora para 42
-        horas nem sobre o cálculo do DSR com dois dias de descanso. Nossas calculadoras mostram esses valores como <strong>estimados</strong> e
-        serão atualizadas assim que a regra for publicada.
+        O decreto atribui ao Ministério do Trabalho um ato específico sobre o descanso semanal remunerado (DSR) com dois dias de descanso e
+        sobre os regimes especiais de jornada (como a 12x36). Atualizaremos as calculadoras assim que ele for publicado.
       </p>
 
       <h2>Perguntas frequentes</h2>
@@ -80,6 +90,10 @@ export default function FimDaEscala6x1Page() {
         Fonte:{' '}
         <a href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc141.htm" target="_blank" rel="noopener noreferrer" className="text-verde-escuro underline">
           Emenda Constitucional nº 141/2026
+        </a>{' '}
+        e{' '}
+        <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D13173.htm" target="_blank" rel="noopener noreferrer" className="text-verde-escuro underline">
+          Decreto nº 13.173/2026
         </a>
         . Conteúdo informativo; não substitui orientação jurídica.
       </p>

@@ -15,13 +15,13 @@ describe('calcularHoraExtra', () => {
     const { comparativo } = calcularHoraExtra(base, '2026-10-28');
     expect(comparativo).toMatchObject({ aPartirDe: '2026-12-16', jornadaSemanal: 42, divisor: 210, horaNormal: 11.43, total: 171.43 });
     expect(comparativo?.linhas[0].valorHora).toBe(17.14);
-    expect(comparativo?.regraDivisor.alertas).toContain('valor-estimado');
+    expect(comparativo?.regraDivisor.alertas).not.toContain('valor-estimado');
   });
 
   it('switches automatically on 16/12/2026 and then compares with 40 hours', () => {
     const r = calcularHoraExtra(base, '2026-12-16');
     expect(r.jornadaSemanal).toBe(42);
-    expect(r.regraDivisor.alertas).toContain('valor-estimado');
+    expect(r.regraDivisor.alertas).not.toContain('valor-estimado');
     expect(r.comparativo).toMatchObject({ aPartirDe: '2027-12-16', jornadaSemanal: 40, divisor: 200, total: 180 });
   });
 

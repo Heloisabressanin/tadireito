@@ -27,8 +27,9 @@ describe('rule catalogue', () => {
     expect(regras.divisor.versoes.map((v) => v.vigenteDesde)).toEqual(datas);
   });
 
-  it('marks the post-EC divisors as estimates until official regulation', () => {
-    expect(resolverRegra(regras.divisor, '2026-12-16').alertas).toContain('valor-estimado');
+  it('treats the 210 and 200 divisors as official since Decreto 13.173/2026', () => {
+    expect(resolverRegra(regras.divisor, '2026-12-16').alertas).not.toContain('valor-estimado');
+    expect(resolverRegra(regras.divisor, '2027-12-16').alertas).not.toContain('valor-estimado');
     expect(resolverRegra(regras.divisor, '2026-11-01').alertas).not.toContain('valor-estimado');
   });
 
